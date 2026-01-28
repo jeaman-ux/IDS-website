@@ -3,7 +3,56 @@
  * Design inspired by modern minimalist aesthetics
  * Template: Shaper HelixUltimate
  * Primary Color: #145a3a (IDS Green)
+ * Version: 1.1 - Production Ready
  */
+
+/* ============================================ */
+/* CSS CUSTOM PROPERTIES (VARIABLES)            */
+/* ============================================ */
+
+:root {
+    /* Brand Colors */
+    --ids-green: #145a3a;
+    --ids-green-dark: #0e3d26;
+    --ids-green-light: rgba(20, 90, 58, 0.1);
+
+    /* Text Colors */
+    --text-primary: #0c1018;
+    --text-secondary: #353941;
+    --text-muted: #6b7280;
+    --text-white: #ffffff;
+
+    /* Background Colors */
+    --bg-cream: #F8EEE3;
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-dark: #171717;
+
+    /* Border Colors */
+    --border-light: #e5e7eb;
+    --border-medium: rgba(229, 231, 235, 0.6);
+
+    /* Alert Colors */
+    --alert-red: #dc2626;
+    --alert-red-light: #fecaca;
+    --alert-red-bg: #fef2f2;
+
+    /* Spacing */
+    --container-max-width: 1280px;
+    --container-padding: 60px;
+    --section-padding: 100px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.3s ease;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Parallax */
+    --parallax-offset: 0px;
+}
 
 /* ============================================ */
 /* RESET & BASE STYLES                          */
@@ -20,17 +69,16 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    color: #171717;
-    background-color: #F8EEE3;
+    color: var(--text-primary);
+    background-color: var(--bg-cream);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow-x: hidden;
-    --parallax-offset: 0px;
 }
 
-/* Parallax Background */
+/* Parallax Background - Optimized for performance */
 body::before {
     content: '';
     position: fixed;
@@ -45,12 +93,22 @@ body::before {
         #D8DBCE 35%,          /* Blue-beige transition */
         #E5D7C4 55%,          /* Soft beige */
         #F0E1D2 75%,          /* Warm beige */
-        #F8EEE3 100%          /* Light warm cream */
+        var(--bg-cream) 100%  /* Light warm cream */
     );
     z-index: -1;
     will-change: transform;
     transform: translate3d(0, calc(var(--parallax-offset) * -1), 0);
     transition: transform 0.05s linear;
+}
+
+/* Reduce parallax effect on mobile for better performance */
+@media (max-width: 768px) {
+    body::before {
+        position: absolute;
+        height: 100vh;
+        will-change: auto;
+        transform: none;
+    }
 }
 
 /* Header Placeholder */
@@ -109,13 +167,13 @@ p {
 }
 
 a {
-    color: #145a3a;
+    color: var(--ids-green);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 a:hover {
-    color: #0e3d26;
+    color: var(--ids-green-dark);
 }
 
 /* ============================================ */
@@ -131,40 +189,40 @@ a:hover {
     font-weight: 500;
     text-decoration: none;
     border-radius: 6px;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     cursor: pointer;
     border: 1.5px solid transparent;
     font-family: 'Roboto', sans-serif;
 }
 
 .btn-primary {
-    background-color: #145a3a;
-    color: #ffffff;
-    border-color: #145a3a;
+    background-color: var(--ids-green);
+    color: var(--text-white);
+    border-color: var(--ids-green);
 }
 
 .btn-primary:hover {
-    background-color: #0e3d26;
-    border-color: #0e3d26;
-    color: #ffffff;
+    background-color: var(--ids-green-dark);
+    border-color: var(--ids-green-dark);
+    color: var(--text-white);
     transform: translateY(-1px);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #145a3a;
-    border-color: #145a3a;
+    color: var(--ids-green);
+    border-color: var(--ids-green);
 }
 
 .btn-secondary:hover {
-    background-color: #145a3a;
-    color: #ffffff;
+    background-color: var(--ids-green);
+    color: var(--text-white);
     transform: translateY(-1px);
 }
 
 .btn-text {
     background-color: transparent;
-    color: #ffffff;
+    color: var(--text-white);
     padding: 6px 0;
     border: none;
 }

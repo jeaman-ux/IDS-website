@@ -13,39 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Auto-reload script for development -->
-    <script>
-        (function() {
-            let lastModified = {};
-            const filesToWatch = [
-                'sustainability-recycling.html',
-                'assets/css/sustainability-recycling.css'
-            ];
-
-            async function checkForChanges() {
-                try {
-                    for (const file of filesToWatch) {
-                        const response = await fetch(file, { method: 'HEAD' });
-                        const modified = response.headers.get('last-modified');
-
-                        if (lastModified[file] && lastModified[file] !== modified) {
-                            console.log(`File changed: ${file}. Reloading...`);
-                            location.reload();
-                            return;
-                        }
-                        lastModified[file] = modified;
-                    }
-                } catch (e) {
-                    console.log('Check failed, will retry...');
-                }
-            }
-
-            // Check every 500ms for changes
-            setInterval(checkForChanges, 500);
-            console.log('Auto-reload enabled - watching for file changes...');
-        })();
-    </script>
 </head>
 <body>
 
@@ -474,13 +441,19 @@
         /**
          * Parallax Background Effect
          * Scrolls background gradient faster than page content
+         * Disabled on mobile devices for better performance
          */
         let ticking = false;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
         function updateParallax() {
+            // Skip parallax on mobile devices for performance
+            if (isMobile) {
+                return;
+            }
+
             const scrolled = window.pageYOffset;
             const parallaxSpeed = 0.5; // Background moves at 50% of scroll speed (faster parallax)
-            const background = document.querySelector('body::before') || document.body;
 
             // Apply transform to move background faster than scroll
             document.body.style.setProperty('--parallax-offset', scrolled * parallaxSpeed + 'px');
@@ -489,13 +462,16 @@
         }
 
         function requestParallaxUpdate() {
-            if (!ticking) {
+            if (!ticking && !isMobile) {
                 window.requestAnimationFrame(updateParallax);
                 ticking = true;
             }
         }
 
-        window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+        // Only add scroll listener on desktop
+        if (!isMobile) {
+            window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+        }
 
         /**
          * Accordion Functionality
