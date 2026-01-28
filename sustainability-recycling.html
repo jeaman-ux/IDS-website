@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability and Recycling | IDS Waste</title>
+    <meta name="description" content="IDS delivers reliable waste service with documented recycling and LEED-ready diversion reporting through our partnership with Broad Run Recycling.">
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="assets/css/sustainability-recycling.css">
+
+    <!-- Roboto font (matching existing site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Auto-reload script for development -->
+    <script>
+        (function() {
+            let lastModified = {};
+            const filesToWatch = [
+                'sustainability-recycling.html',
+                'assets/css/sustainability-recycling.css'
+            ];
+
+            async function checkForChanges() {
+                try {
+                    for (const file of filesToWatch) {
+                        const response = await fetch(file, { method: 'HEAD' });
+                        const modified = response.headers.get('last-modified');
+
+                        if (lastModified[file] && lastModified[file] !== modified) {
+                            console.log(`File changed: ${file}. Reloading...`);
+                            location.reload();
+                            return;
+                        }
+                        lastModified[file] = modified;
+                    }
+                } catch (e) {
+                    console.log('Check failed, will retry...');
+                }
+            }
+
+            // Check every 500ms for changes
+            setInterval(checkForChanges, 500);
+            console.log('Auto-reload enabled - watching for file changes...');
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER SECTION                               -->
+    <!-- ============================================ -->
+    <!--
+        IMPLEMENTATION NOTE FOR JOOMLA TEAM:
+        Replace this placeholder section with your existing site header.
+        Use your standard Joomla header module or template include.
+
+        Example Joomla code:
+        <jdoc:include type="modules" name="header" style="none" />
+    -->
+    <header class="site-header-placeholder">
+        <div class="container">
+            <p style="padding: 20px; background: #f0f0f0; text-align: center; margin: 0;">
+                <strong>🔧 REPLACE THIS WITH EXISTING JOOMLA SITE HEADER 🔧</strong>
+            </p>
+        </div>
+    </header>
+    <!-- END HEADER PLACEHOLDER -->
+
+
+    <!-- ============================================ -->
+    <!-- MAIN CONTENT                                 -->
+    <!-- ============================================ -->
+    <main class="sustainability-page">
+
+        <!-- ============================================ -->
+        <!-- SECTION 1: HERO SECTION                      -->
+        <!-- ============================================ -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">Sustainability & Recycling</div>
+                        <h1>Recycling You Can Prove</h1>
+
+                        <div class="hero-intro">
+                            <p class="hero-lead">Anyone can haul waste. IDS delivers reliable service paired with documented recycling and LEED ready diversion reporting.</p>
+
+                            <p>Through our partnership with <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer">Broad Run Recycling</a>, all materials are processed at a dedicated Construction & Debris recycling facility—every time. <strong>We are built for heavy waste and committed to a lighter impact.</strong></p>
+                        </div>
+
+                        <div class="hero-ctas">
+                            <a href="#section-a-sustainability" class="btn btn-primary">See How IDS Supports Sustainability</a>
+                            <a href="/contact" class="btn btn-secondary">Talk to IDS</a>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="trust-indicators">
+                            <div class="trust-item">
+                                <div class="trust-label">LEED Ready Reporting</div>
+                            </div>
+                            <div class="trust-item">
+                                <div class="trust-label">RCI Certified Partner</div>
+                            </div>
+                            <div class="trust-item">
+                                <div class="trust-label">700+ Tons Daily</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management Dumpster - Commercial & Residential Service" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- SECTION 2: SUSTAINABILITY YOU CAN STAND BEHIND -->
+        <!-- ============================================ -->
+        <section id="section-a-sustainability" class="sustainability-section">
+            <div class="container">
+                <div class="sustainability-two-column">
+                    <!-- Left Column: Title and Text -->
+                    <div class="sustainability-left">
+                        <span class="section-label">Our Commitment</span>
+                        <h2>Sustainability You Can Stand Behind</h2>
+                        <p class="section-subtitle">At IDS, recycling is mandatory. Every load goes through a documented process backed by real data and industry-recognized standards.</p>
+
+                        <div class="sustainability-extra-text">
+                            <p>Through our work with <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer">Broad Run Recycling</a>, we give you the accountability you need.</p>
+                            <p>From material collection through final diversion reporting, IDS supports your sustainability goals with accountability, so you can stay focused on delivering successful projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Full Width Stacked Cards -->
+                    <div class="sustainability-right">
+                        <div class="benefits-grid-stacked">
+                            <div class="benefit-card-large">
+                                <div class="benefit-card-image">
+                                    <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management Dumpster" class="benefit-image">
+                                </div>
+                                <div class="benefit-card-content">
+                                    <h3>Real Recycling, Not Assumptions</h3>
+                                    <p>Every load is documented with facility-verified data, not estimated percentages.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card-large">
+                                <div class="benefit-card-image">
+                                    <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management Dumpster" class="benefit-image">
+                                </div>
+                                <div class="benefit-card-content">
+                                    <h3>LEED & Sustainability Reporting</h3>
+                                    <p>Accurate diversion records that meet LEED requirements and pass sustainability audits.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card-large">
+                                <div class="benefit-card-image">
+                                    <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management Dumpster" class="benefit-image">
+                                </div>
+                                <div class="benefit-card-content">
+                                    <h3>Dedicated Sustainability Rep</h3>
+                                    <p>Job-specific reporting support to meet your unique project requirements.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card-large">
+                                <div class="benefit-card-image">
+                                    <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management Dumpster" class="benefit-image">
+                                </div>
+                                <div class="benefit-card-content">
+                                    <h3>Start to Finish Service</h3>
+                                    <p>Complete jobsite service from material collection through final diversion reporting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- SECTION 3: BROAD RUN RECYCLING               -->
+        <!-- ============================================ -->
+        <section id="section-b-broadrun" class="broadrun-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-label">Our Partner</span>
+                    <h2>Meet Broad Run Recycling</h2>
+                </div>
+
+                <!-- Bento Grid Layout -->
+                <div class="bento-grid">
+                    <!-- Left Column: Three Stats Cards Stacked -->
+                    <div class="bento-left">
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number">Only</div>
+                            <div class="stat-label">Third-Party Certified C&D Facility in DC Metro</div>
+                        </div>
+
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number">700+</div>
+                            <div class="stat-label">Tons Processed Daily</div>
+                        </div>
+
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number">26,000</div>
+                            <div class="stat-label">Sq Ft Facility</div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Combined Card -->
+                    <div class="bento-right">
+                        <div class="bento-item bento-combined-card">
+                            <div class="bento-hero">
+                                <img src="assets/images/hero-dumpster.png" alt="Broad Run Recycling Facility" class="bento-hero-image">
+                            </div>
+                            <div class="bento-content">
+                                <p class="large-text">Materials are processed through a transparent, facility-based system designed to support accurate diversion tracking, sustainability compliance, and defensible reporting.</p>
+
+                                <p class="materials-link">
+                                    <a href="https://www.broadrunrecycling.com/materials" target="_blank" rel="noopener noreferrer" class="link-arrow">View materials accepted at Broad Run Recycling →</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Broad Run Marketing Block -->
+                <div class="why-broadrun-marketing">
+                    <div class="marketing-content">
+                        <h3>Why Broad Run</h3>
+                        <p class="marketing-subtitle">Broad Run Recycling is a dedicated C&D recycling facility serving the DC metro region. The facility is purpose-built to sort, track, and process construction materials with consistency, transparency, and accountability.</p>
+
+                        <p>Broad Run operates under <strong>RCI certified standards</strong> and provides the facility-level data needed to support accurate diversion reporting and sustainability documentation.</p>
+
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">+</span>
+                                <div class="feature-content">
+                                    <strong>On-site Weighing & Tracking.</strong> Real-time material measurement and documentation
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">+</span>
+                                <div class="feature-content">
+                                    <strong>Dedicated Equipment & Staff.</strong> Purpose-built facility with trained professionals
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">+</span>
+                                <div class="feature-content">
+                                    <strong>RCI Certified Standards.</strong> Third-party verified recycling processes
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">+</span>
+                                <div class="feature-content">
+                                    <strong>Material-Level Data.</strong> Detailed diversion reporting by material type
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">+</span>
+                                <div class="feature-content">
+                                    <strong>Waste Management Plans.</strong> Supports construction project compliance
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p class="marketing-footer">
+                            <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer" class="link-arrow">Visit Broad Run Recycling →</a>
+                        </p>
+                    </div>
+
+                    <div class="marketing-image">
+                        <img src="assets/images/hero-dumpster.png" alt="Broad Run Recycling Facility" class="marketing-img">
+                    </div>
+                </div>
+
+                <!-- CTA Band Below Module -->
+                <div class="broadrun-cta-band">
+                    <div class="cta-band-content">
+                        <h3>Ready to design a waste and recycling plan built for sustainability and reporting accuracy?</h3>
+                        <p>Work with IDS to create a documented recycling strategy that supports your project goals.</p>
+                        <a href="/contact" class="btn btn-primary btn-large">Contact IDS to Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- SECTION 4: WHY ACCURATE REPORTING MATTERS    -->
+        <!-- ============================================ -->
+        <section id="section-c-reporting" class="reporting-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-label alert">Critical Insight</span>
+                    <h2>Why Accurate Reporting Matters</h2>
+                    <p class="section-subtitle">In construction, waste and recycling data is not just a formality. It directly impacts project compliance, sustainability goals, and owner confidence.</p>
+                </div>
+
+                <div class="risks-container">
+                    <div class="risks-intro">
+                        <h3>When diversion data is estimated or inaccurate:</h3>
+                    </div>
+
+                    <div class="risks-grid">
+                        <div class="risk-card">
+                            <div class="risk-icon warning">⚠️</div>
+                            <h4>LEED Documentation Issues</h4>
+                            <p>Delays or rejections during review that impact project timelines</p>
+                        </div>
+
+                        <div class="risk-card">
+                            <div class="risk-icon warning">⏱️</div>
+                            <h4>Last-Minute Scrambling</h4>
+                            <p>Rework and data collection late in the project when errors are discovered</p>
+                        </div>
+
+                        <div class="risk-card">
+                            <div class="risk-icon warning">📉</div>
+                            <h4>Reduced Diversion Rates</h4>
+                            <p>Reported percentages that don't reflect actual material recovery</p>
+                        </div>
+
+                        <div class="risk-card">
+                            <div class="risk-icon warning">🤝</div>
+                            <h4>Lost Credibility</h4>
+                            <p>Damaged relationships with owners, auditors, and sustainability teams</p>
+                        </div>
+
+                        <div class="risk-card">
+                            <div class="risk-icon warning">🎯</div>
+                            <h4>Missed Targets</h4>
+                            <p>Sustainability goals compromised by assumptions instead of verified data</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-callout">
+                    <div class="insight-icon">💡</div>
+                    <div class="insight-content">
+                        <h3>The Real Issue: Process, Not Intent</h3>
+                        <p>In many cases, the issue is not intent, but process. Without facility-level tracking, diversion reporting becomes an estimate rather than a defensible record.</p>
+                        <p><strong>IDS approaches recycling with the expectation that data must hold up under review, not just look good on paper.</strong></p>
+                    </div>
+                </div>
+
+                <div class="section-cta">
+                    <a href="/contact" class="btn btn-primary btn-large">Mitigate Risk. Get Accurate Reporting.</a>
+                </div>
+
+                <!-- ACCORDION: Industry Shortcuts vs IDS Approach -->
+                <div class="comparison-accordion">
+                    <div class="accordion-item comparison-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-title">
+                                <span class="accordion-icon-left" aria-hidden="true">⚖️</span>
+                                <span>Industry Shortcuts vs IDS Approach</span>
+                            </span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="comparison-grid">
+                                    <div class="comparison-column shortcuts">
+                                        <div class="comparison-header">
+                                            <span class="comparison-icon">❌</span>
+                                            <h4>Common Industry Shortcuts</h4>
+                                        </div>
+                                        <ul>
+                                            <li><span class="bullet-icon">▸</span> Recycling claims based on <em>assumed</em> diversion percentages</li>
+                                            <li><span class="bullet-icon">▸</span> Limited visibility into where material goes after haul-off</li>
+                                            <li><span class="bullet-icon">▸</span> Mixed debris sent to facilities with minimal sorting capability</li>
+                                            <li><span class="bullet-icon">▸</span> Generic reports with little material-level detail</li>
+                                            <li><span class="bullet-icon">▸</span> Recycling treated as a marketing claim rather than an operational process</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-column ids-approach">
+                                        <div class="comparison-header">
+                                            <span class="comparison-icon">✓</span>
+                                            <h4>The IDS Approach</h4>
+                                        </div>
+                                        <ul>
+                                            <li><span class="bullet-icon">▸</span> <strong>Facility-verified diversion</strong> through Broad Run Recycling</li>
+                                            <li><span class="bullet-icon">▸</span> <strong>Transparent material tracking</strong> at the facility level</li>
+                                            <li><span class="bullet-icon">▸</span> <strong>Project-specific, defensible reporting</strong></li>
+                                            <li><span class="bullet-icon">▸</span> Data that <strong>supports LEED and sustainability review</strong></li>
+                                            <li><span class="bullet-icon">▸</span> <strong>Recycling treated as an operational process</strong> from start to finish</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- SECTION 5: FINAL CONVERSION CTA              -->
+        <!-- ============================================ -->
+        <section class="final-cta-section">
+            <div class="final-cta-background">
+                <img src="assets/images/hero-dumpster.png" alt="IDS Waste Management" class="final-cta-bg-image">
+                <div class="final-cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="final-cta-content">
+                    <div class="final-cta-badge">Partner with Confidence</div>
+                    <h2>Let's simplify recycling while protecting your sustainability goals.</h2>
+                    <p class="final-cta-subtext">Work with a partner that treats recycling as an operational process, not a marketing claim.</p>
+
+                    <div class="final-cta-buttons">
+                        <a href="/contact" class="btn btn-primary btn-xl">Talk to IDS</a>
+                        <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer" class="btn btn-text">Explore Broad Run Recycling →</a>
+                    </div>
+
+                    <!-- Trust Footer -->
+                    <div class="final-trust-items">
+                        <div class="trust-mini-item">
+                            <span class="trust-mini-icon">📞</span>
+                            <span>Quick Response</span>
+                        </div>
+                        <div class="trust-mini-item">
+                            <span class="trust-mini-icon">📄</span>
+                            <span>Detailed Reporting</span>
+                        </div>
+                        <div class="trust-mini-item">
+                            <span class="trust-mini-icon">✓</span>
+                            <span>LEED Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION                               -->
+    <!-- ============================================ -->
+    <!--
+        IMPLEMENTATION NOTE FOR JOOMLA TEAM:
+        Replace this placeholder section with your existing site footer.
+
+        Example Joomla code:
+        <jdoc:include type="modules" name="footer" style="none" />
+    -->
+    <footer class="site-footer-placeholder">
+        <div class="container">
+            <p style="padding: 20px; background: #171717; color: #fff; text-align: center; margin: 0;">
+                <strong>🔧 REPLACE THIS WITH EXISTING JOOMLA SITE FOOTER 🔧</strong>
+            </p>
+        </div>
+    </footer>
+    <!-- END FOOTER PLACEHOLDER -->
+
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT FOR ACCORDION AND TABS            -->
+    <!-- ============================================ -->
+    <script>
+        /**
+         * Parallax Background Effect
+         * Scrolls background gradient faster than page content
+         */
+        let ticking = false;
+
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const parallaxSpeed = 0.5; // Background moves at 50% of scroll speed (faster parallax)
+            const background = document.querySelector('body::before') || document.body;
+
+            // Apply transform to move background faster than scroll
+            document.body.style.setProperty('--parallax-offset', scrolled * parallaxSpeed + 'px');
+
+            ticking = false;
+        }
+
+        function requestParallaxUpdate() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+
+        /**
+         * Accordion Functionality
+         * Handles expand/collapse behavior for accordion components
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Initialize all accordions
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordionItem = this.closest('.accordion-item');
+                    const content = accordionItem.querySelector('.accordion-content');
+                    const icon = this.querySelector('.accordion-icon');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle accordion
+                    if (isExpanded) {
+                        // Collapse
+                        this.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = null;
+                        content.classList.remove('active');
+                        icon.textContent = '+';
+                    } else {
+                        // Expand
+                        this.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.add('active');
+                        icon.textContent = '−';
+                    }
+                });
+            });
+
+            /**
+             * Tab Functionality
+             * Handles tab switching behavior
+             */
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    const tabsContainer = this.closest('.tabs-container');
+
+                    // Remove active class from all buttons and panels in this container
+                    tabsContainer.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+
+                    tabsContainer.querySelectorAll('.tab-panel').forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button and corresponding panel
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    const targetPanel = tabsContainer.querySelector('#' + targetTab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+
+            /**
+             * Smooth Scroll for Anchor Links
+             * Provides smooth scrolling behavior for internal page links
+             */
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+
+                    // Skip if it's just "#"
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Update URL without page jump
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
