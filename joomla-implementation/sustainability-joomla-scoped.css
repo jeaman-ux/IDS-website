@@ -84,6 +84,12 @@
     padding: 0 60px;
 }
 
+/* SP Page Builder - Remove container padding for full width */
+.sp-page-builder .sustainability-page .container {
+    padding: 0;
+    max-width: 100%;
+}
+
 /* ============================================ */
 /* TYPOGRAPHY (SCOPED)                         */
 /* ============================================ */
