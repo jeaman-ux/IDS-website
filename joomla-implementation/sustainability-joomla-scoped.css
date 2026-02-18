@@ -86,8 +86,35 @@
 
 /* SP Page Builder - Remove container padding for full width */
 .sp-page-builder .sustainability-page .container {
-    padding: 0;
-    max-width: 100%;
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Target SP Page Builder's row containers */
+.sppb-row-container,
+.sppb-container,
+.sppb-container-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Force full width on all sections in SP Page Builder */
+.sp-page-builder .sustainability-page section {
+    margin: 0 !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+}
+
+/* Mobile responsive for SP Page Builder */
+@media (max-width: 768px) {
+    .sp-page-builder .sustainability-page section {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
 }
 
 /* ============================================ */
