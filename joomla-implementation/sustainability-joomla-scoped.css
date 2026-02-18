@@ -65,6 +65,17 @@
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background: linear-gradient(180deg,
+        #B8D8E8 0%,           /* Soft sky blue */
+        #C5DDEA 15%,          /* Light blue */
+        #D8DBCE 35%,          /* Blue-beige transition */
+        #E5D7C4 55%,          /* Soft beige */
+        #F0E1D2 75%,          /* Warm beige */
+        #F8EEE3 100%          /* Light warm cream */
+    );
+    min-height: 100vh;
+    padding: 0;
 }
 
 .sustainability-page .container {
