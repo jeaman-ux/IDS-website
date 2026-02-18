@@ -91,10 +91,36 @@
     margin: 0 !important;
 }
 
+/* Expand sustainability page to break out of SP Page Builder container */
+.sustainability-page {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
 /* Target SP Page Builder's row containers - ONLY for sustainability page */
 .sustainability-page .sppb-row-container,
 .sustainability-page .sppb-container,
 .sustainability-page .sppb-container-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Override SP Page Builder column padding */
+.sustainability-page .sppb-column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Override SP Page Builder section/row */
+.sustainability-page .sppb-section,
+.sustainability-page .sppb-row {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
