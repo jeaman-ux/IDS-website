@@ -1,0 +1,440 @@
+<!--
+==============================================
+SUSTAINABILITY PAGE - COMPLETE ARTICLE VERSION
+==============================================
+Copy this ENTIRE file into your Joomla article
+Instructions at bottom
+==============================================
+-->
+
+<style>
+/* Scoped CSS - Only affects this page */
+.sustainability-page{--ids-green:#145a3a;--ids-green-dark:#0e3d26;--ids-green-light:rgba(20,90,58,0.1);--text-primary:#0c1018;--text-secondary:#353941;--text-muted:#6b7280;--text-white:#ffffff;--bg-cream:#F8EEE3;--bg-white:#ffffff;--bg-light:#f9fafb;--bg-dark:#171717;--border-light:#e5e7eb;--border-medium:rgba(229,231,235,0.6);--container-max-width:1280px;--container-padding:60px;--section-padding:100px;--transition-fast:0.2s ease;--transition-smooth:0.3s ease;--shadow-sm:0 4px 12px rgba(0,0,0,0.08);--shadow-md:0 8px 24px rgba(0,0,0,0.12)}.sustainability-page *{margin:0;padding:0;box-sizing:border-box}.sustainability-page{font-family:'Roboto',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;font-weight:400;line-height:1.6;color:var(--text-primary);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.sustainability-page .container{width:100%;max-width:1280px;margin:0 auto;padding:0 60px}.sustainability-page h1,.sustainability-page h2,.sustainability-page h3,.sustainability-page h4{font-weight:700;line-height:1.2;margin-bottom:1.25rem;color:#0c1018;letter-spacing:-0.01em}.sustainability-page h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:700}.sustainability-page h2{font-size:clamp(2rem,4vw,3rem)}.sustainability-page h3{font-size:clamp(1.5rem,3vw,2rem);font-weight:600}.sustainability-page h4{font-size:1.25rem;font-weight:600}.sustainability-page p{margin-bottom:1.25rem;line-height:1.7}.sustainability-page a{color:var(--ids-green);text-decoration:none;transition:color var(--transition-fast)}.sustainability-page a:hover{color:var(--ids-green-dark)}.sustainability-page .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;font-size:1rem;font-weight:500;text-decoration:none;border-radius:6px;transition:all var(--transition-fast);cursor:pointer;border:1.5px solid transparent;font-family:'Roboto',sans-serif}.sustainability-page .btn-primary{background-color:var(--ids-green);color:var(--text-white);border-color:var(--ids-green)}.sustainability-page .btn-primary:hover{background-color:var(--ids-green-dark);border-color:var(--ids-green-dark);color:var(--text-white);transform:translateY(-1px)}.sustainability-page .btn-secondary{background-color:transparent;color:var(--ids-green);border-color:var(--ids-green)}.sustainability-page .btn-secondary:hover{background-color:var(--ids-green);color:var(--text-white);transform:translateY(-1px)}.sustainability-page .btn-text{background-color:transparent;color:var(--text-white);padding:6px 0;border:none}.sustainability-page .btn-text:hover{opacity:0.8}.sustainability-page .btn-large{padding:12px 28px;font-size:1.0625rem}.sustainability-page .btn-xl{padding:14px 32px;font-size:1.125rem}.sustainability-page section{padding:140px 0}.sustainability-page .section-header{max-width:800px;margin-bottom:4rem}.sustainability-page .section-header.centered{text-align:center;margin-left:auto;margin-right:auto}.sustainability-page .section-header-hero{max-width:1000px;margin:0 auto 5rem;text-align:center}.sustainability-page .section-eyebrow{display:inline-block;font-size:0.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#145a3a;margin-bottom:1.5rem}.sustainability-page .section-hero-title{font-size:3rem;font-weight:700;line-height:1.1;color:#0c1018;margin-bottom:1.5rem}.sustainability-page .section-hero-subtitle{font-size:1.25rem;line-height:1.6;color:#6b7280;max-width:900px;margin:0 auto}.sustainability-page .section-label{display:inline-block;font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#145a3a;margin-bottom:1rem}.sustainability-page .section-subtitle{font-size:1.125rem;color:#6b7280;margin-top:1rem;line-height:1.7}.sustainability-page .large-text{font-size:1.125rem;line-height:1.7;color:#353941}.sustainability-page .hero-section{padding:120px 0 140px;background:transparent;position:relative}.sustainability-page .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}.sustainability-page .hero-content{max-width:600px;position:relative;z-index:1}.sustainability-page .hero-eyebrow{font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#145a3a;margin-bottom:1.5rem;line-height:1}.sustainability-page .hero-section h1{margin-bottom:2rem;margin-top:0;color:#0c1018}.sustainability-page .hero-intro{margin-bottom:2.5rem}.sustainability-page .hero-lead{font-size:1.25rem;line-height:1.6;color:#353941;margin-bottom:1.5rem}.sustainability-page .hero-intro p{color:#353941;font-size:1rem}.sustainability-page .hero-intro a{color:#145a3a;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}.sustainability-page .hero-intro strong{color:#145a3a;font-weight:700}.sustainability-page .hero-ctas{display:flex;gap:1rem;margin-bottom:3rem}.sustainability-page .trust-indicators{display:flex;gap:2rem;padding-top:2rem;border-top:1px solid #e5e7eb}.sustainability-page .trust-item{display:flex;align-items:center}.sustainability-page .trust-label{font-size:0.875rem;font-weight:500;color:#6b7280}.sustainability-page .hero-visual{position:relative;z-index:1;margin-top:2.375rem}.sustainability-page .hero-image{width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12);display:block;margin-top:0}.sustainability-page .sustainability-section{background:transparent;position:relative}.sustainability-page .sustainability-two-column{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;margin-bottom:3rem}.sustainability-page .sustainability-left{position:sticky;top:2rem}.sustainability-page .sustainability-left .section-label{display:inline-block;margin-bottom:1rem}.sustainability-page .sustainability-left h2{margin-bottom:1.5rem}.sustainability-page .sustainability-left .section-subtitle{font-size:1.125rem;color:#353941;line-height:1.7;margin-bottom:2rem}.sustainability-page .sustainability-extra-text{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(0,0,0,0.1)}.sustainability-page .sustainability-extra-text p{font-size:1rem;line-height:1.7;color:#353941;margin-bottom:1rem}.sustainability-page .sustainability-extra-text a{color:#145a3a;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}.sustainability-page .sustainability-right{display:flex;align-items:start;margin-top:2.5rem}.sustainability-page .benefits-grid-stacked{display:flex;flex-direction:column;gap:2rem;width:100%}.sustainability-page .benefit-card-large{display:flex;flex-direction:column;gap:1.25rem;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);padding:1.5rem;border:1px solid rgba(229,231,235,0.4);border-radius:12px;transition:all 0.2s ease}.sustainability-page .benefit-card-large:hover{background:rgba(255,255,255,0.85);border-color:rgba(20,90,58,0.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}.sustainability-page .benefit-card-image{width:100%;height:200px;flex-shrink:0}.sustainability-page .benefit-image{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}.sustainability-page .benefit-card-content{flex:1}.sustainability-page .benefit-card-content h3{font-size:1.125rem;margin-bottom:0.5rem;color:#0c1018;font-weight:600}.sustainability-page .benefit-card-content p{color:#6b7280;line-height:1.6;margin-bottom:0;font-size:0.9375rem}.sustainability-page .broadrun-section{background:#ffffff;position:relative}.sustainability-page .bento-grid{display:grid;grid-template-columns:35% 1fr;gap:2rem;margin:3rem 0}.sustainability-page .bento-left{display:flex;flex-direction:column;gap:1.5rem}.sustainability-page .bento-right{display:flex;flex-direction:column}.sustainability-page .bento-item{border-radius:16px;overflow:hidden}.sustainability-page .bento-combined-card{display:flex;flex-direction:column;height:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border:1px solid rgba(229,231,235,0.6)}.sustainability-page .bento-hero{height:280px;position:relative;flex-shrink:0}.sustainability-page .bento-hero-image{width:100%;height:100%;object-fit:cover;display:block}.sustainability-page .bento-stat{background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:2.5rem 2rem;text-align:center;border:1px solid rgba(229,231,235,0.6);transition:all 0.2s ease}.sustainability-page .bento-stat:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.1);background:rgba(255,255,255,1)}.sustainability-page .stat-number{font-size:2.75rem;font-weight:700;color:#145a3a;margin-bottom:0.75rem;line-height:1}.sustainability-page .stat-label{font-size:0.9375rem;color:#6b7280;font-weight:500;line-height:1.4}.sustainability-page .bento-combined-card .bento-content{padding:2rem;flex:1;display:flex;flex-direction:column;justify-content:center}.sustainability-page .bento-combined-card .bento-content p{margin-bottom:1rem}.sustainability-page .bento-combined-card .bento-content .large-text{font-size:1.125rem;line-height:1.7;color:#333}.sustainability-page .bento-combined-card .bento-content .materials-link{margin-bottom:0}.sustainability-page .why-broadrun-marketing{display:grid;grid-template-columns:1fr 40%;gap:4rem;margin:4rem 0;align-items:center}.sustainability-page .marketing-content h3{font-size:2rem;color:#171717;margin-bottom:1rem;line-height:1.3}.sustainability-page .marketing-subtitle{font-size:1rem;line-height:1.7;color:#6b7280;margin-bottom:2rem}.sustainability-page .feature-list{list-style:none;padding:0;margin:0 0 2rem 0}.sustainability-page .feature-item{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}.sustainability-page .feature-icon{font-size:1.5rem;font-weight:300;color:#145a3a;flex-shrink:0;line-height:1}.sustainability-page .feature-content{flex:1;line-height:1.6;color:#333}.sustainability-page .feature-content strong{color:#171717;font-weight:600}.sustainability-page .marketing-footer{margin-top:2rem}.sustainability-page .marketing-footer .link-arrow{color:#145a3a;text-decoration:none;font-weight:500;font-size:1rem}.sustainability-page .marketing-footer .link-arrow:hover{text-decoration:underline}.sustainability-page .marketing-image{border-radius:16px;overflow:hidden;height:100%}.sustainability-page .marketing-img{width:100%;height:100%;object-fit:cover;display:block}.sustainability-page .broadrun-cta-band{position:relative;background:linear-gradient(135deg,#f0f9f5 0%,#e8f5ed 50%,#f0f9f5 100%);color:#171717;padding:4rem 3rem;margin-top:4rem;border-radius:12px;text-align:center;overflow:hidden}.sustainability-page .broadrun-cta-band::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(0deg,rgba(20,90,58,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(20,90,58,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:1}.sustainability-page .cta-band-content{position:relative;z-index:2}.sustainability-page .cta-band-content h3{color:#145a3a;font-size:2rem;margin-bottom:1rem;font-weight:600}.sustainability-page .cta-band-content p{font-size:1.0625rem;margin-bottom:2rem;color:#333;max-width:700px;margin-left:auto;margin-right:auto}.sustainability-page .cta-band-content .btn-primary{background:#ffffff;color:#145a3a;border-color:#ffffff}.sustainability-page .cta-band-content .btn-primary:hover{background:#f3f4f6;border-color:#f3f4f6}.sustainability-page .reporting-section{background:#f9fafb;position:relative}.sustainability-page .risks-container{max-width:1100px;margin:0 auto 4rem}.sustainability-page .risks-intro{text-align:center;margin-bottom:3rem}.sustainability-page .risks-intro h3{color:#353941;font-size:1.5rem;font-weight:500}.sustainability-page .risks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}.sustainability-page .risk-card{background:#ffffff;padding:2rem;border:1px solid #e5e7eb;border-radius:8px;transition:all 0.2s ease}.sustainability-page .risk-card:hover{border-color:#d1d5db;box-shadow:0 2px 8px rgba(0,0,0,0.04)}.sustainability-page .risk-icon-flat{width:48px;height:48px;margin-bottom:1.5rem;color:#6b7280}.sustainability-page .risk-card h4{font-size:1.0625rem;margin-bottom:0.75rem;font-weight:600}.sustainability-page .risk-card p{font-size:0.9375rem;color:#6b7280;margin-bottom:0;line-height:1.6}.sustainability-page .insight-callout-card{max-width:900px;margin:0 auto;padding:0;background:transparent;border:none;border-radius:0;box-shadow:none;text-align:center}.sustainability-page .callout-icon{margin:0 auto 2.5rem;width:56px;height:56px;color:#145a3a}.sustainability-page .callout-content h3{font-size:1.75rem;margin-bottom:2rem;font-weight:600;color:#0c1018}.sustainability-page .callout-content p{font-size:1.125rem;line-height:1.7;color:#353941;margin-bottom:1.5rem}.sustainability-page .callout-content p:last-child{margin-bottom:0}.sustainability-page .callout-highlight{font-size:1.125rem;font-weight:600;color:#0c1018}.sustainability-page .callout-content .btn{margin-top:2.5rem;display:inline-block}.sustainability-page .callout-content .comparison-section-standalone{margin:3rem 0}.sustainability-page .comparison-section-standalone{max-width:1100px;margin:3rem auto;padding:3rem;background:#ffffff;border:2px solid #e5e7eb;border-radius:12px}.sustainability-page .comparison-title-wrapper{display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:2.5rem;padding-bottom:1.25rem;border-bottom:1px solid #e5e7eb}.sustainability-page .comparison-title-wrapper svg{width:28px;height:28px;color:#6b7280}.sustainability-page .comparison-title-wrapper h3{font-size:1.25rem;font-weight:600;color:#0c1018;margin:0}.sustainability-page .callout-content .comparison-title-wrapper h3{font-size:1.125rem}.sustainability-page .comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}.sustainability-page .comparison-column{text-align:left}.sustainability-page .comparison-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:2px solid #e5e7eb;justify-content:flex-start}.sustainability-page .comparison-icon{font-size:1.75rem}.sustainability-page .comparison-column h4{font-size:1.125rem;margin:0;font-weight:600}.sustainability-page .comparison-column.shortcuts h4{color:#374151}.sustainability-page .comparison-column.ids-approach h4{color:#145a3a}.sustainability-page .comparison-column.shortcuts .comparison-icon{color:#6b7280}.sustainability-page .comparison-column.ids-approach .comparison-icon{color:#145a3a}.sustainability-page .comparison-column ul{list-style:none;margin:0;text-align:left}.sustainability-page .comparison-column ul li{display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:1rem;line-height:1.6;font-size:0.9375rem;text-align:left}.sustainability-page .comparison-column ul li > span:not(.bullet-icon){flex:1}.sustainability-page .bullet-icon{color:#9ca3af;flex-shrink:0}.sustainability-page .comparison-column.shortcuts ul li em{font-style:italic;color:#6b7280;font-weight:500}.sustainability-page .comparison-column.ids-approach ul li strong{font-weight:600;color:#145a3a}.sustainability-page .final-cta-section{background:#f9fafb;padding:100px 0;position:relative}.sustainability-page .final-cta-content{text-align:center;max-width:900px;margin:0 auto;position:relative;z-index:2}.sustainability-page .final-cta-badge{display:inline-block;font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#ffffff;background:rgba(20,90,58,0.9);padding:8px 20px;border-radius:20px;margin-bottom:1.5rem}.sustainability-page .final-cta-content h2{margin-bottom:1.25rem;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,0.3)}.sustainability-page .final-cta-subtext{font-size:1.125rem;color:#ffffff;margin-bottom:2.5rem;line-height:1.7;text-shadow:0 2px 4px rgba(0,0,0,0.2)}.sustainability-page .final-cta-buttons{display:flex;gap:1.25rem;justify-content:center;margin-bottom:3rem}.sustainability-page .final-trust-items{display:flex;gap:3rem;justify-content:center;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.3)}.sustainability-page .trust-mini-item{display:flex;align-items:center;gap:0.75rem;font-size:0.9375rem;font-weight:500;color:#ffffff}.sustainability-page .trust-mini-icon{font-size:1.25rem}.sustainability-page .final-cta-background{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}.sustainability-page .final-cta-bg-image{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}@media (max-width:1024px){.sustainability-page .container{padding:0 40px}.sustainability-page .hero-grid{gap:60px}.sustainability-page .sustainability-two-column{grid-template-columns:1fr;gap:3rem}.sustainability-page .sustainability-left{position:relative;top:0}.sustainability-page .bento-grid{grid-template-columns:1fr;gap:1.5rem}.sustainability-page .bento-left{gap:1.25rem}.sustainability-page .bento-hero{height:300px}.sustainability-page .bento-combined-card .bento-content{padding:1.5rem}.sustainability-page .why-broadrun-marketing{grid-template-columns:1fr;gap:2rem}.sustainability-page .marketing-content h3{font-size:1.75rem}.sustainability-page .feature-item{margin-bottom:1.25rem}.sustainability-page .marketing-image{order:-1;height:300px}}@media (max-width:768px){.sustainability-page .container{padding:0 24px}.sustainability-page section{padding:80px 0}.sustainability-page .section-hero-title{font-size:2rem;margin-bottom:1rem}.sustainability-page .section-hero-subtitle{font-size:1.0625rem}.sustainability-page .hero-section{padding:80px 0 100px}.sustainability-page .hero-grid{grid-template-columns:1fr;gap:40px}.sustainability-page .hero-content{max-width:100%}.sustainability-page .hero-ctas{flex-direction:column;gap:0.75rem}.sustainability-page .hero-ctas .btn{width:100%}.sustainability-page .trust-indicators{flex-wrap:wrap;gap:1rem}.sustainability-page .sustainability-two-column{gap:2rem}.sustainability-page .sustainability-right{margin-top:0}.sustainability-page .sustainability-extra-text{margin-top:2rem;padding-top:2rem}.sustainability-page .comparison-grid{grid-template-columns:1fr;gap:2rem}.sustainability-page .comparison-section-standalone{padding:2rem 1.5rem;margin-top:3rem}.sustainability-page .comparison-title-wrapper{flex-direction:column;text-align:center;gap:0.75rem}.sustainability-page .comparison-title-wrapper h3{font-size:1.25rem}.sustainability-page .callout-content .comparison-section-standalone{margin:2.5rem 0;padding:2rem 1.5rem}.sustainability-page .broadrun-cta-band{padding:2rem 1.5rem}.sustainability-page .final-cta-buttons{flex-direction:column;gap:0.75rem}.sustainability-page .final-cta-buttons .btn{width:100%}.sustainability-page .final-trust-items{flex-wrap:wrap;gap:1.5rem}}@media (max-width:480px){.sustainability-page .container{padding:0 20px}.sustainability-page section{padding:70px 0}.sustainability-page .hero-section{padding:60px 0 70px}.sustainability-page .benefit-card-large{padding:1.25rem}.sustainability-page .insight-callout-card{padding:0}}
+</style>
+
+<div class="sustainability-page">
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Sustainability & Recycling</div>
+                <h1>Recycling You Can Prove</h1>
+
+                <div class="hero-intro">
+                    <p class="hero-lead">Anyone can haul waste. IDS delivers reliable service paired with documented recycling and LEED ready diversion reporting.</p>
+                    <p>Through our partnership with <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer">Broad Run Recycling</a>, all materials are processed at a dedicated Construction & Debris recycling facility—every time. <strong>We are built for heavy waste and committed to a lighter impact.</strong></p>
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="#section-a-sustainability" class="btn btn-primary">See How IDS Supports Sustainability</a>
+                    <a href="/contact" class="btn btn-secondary">Talk to IDS</a>
+                </div>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <div class="trust-label">LEED Ready Reporting</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-label">RCI Certified Partner</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-label">700+ Tons Daily</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="images/sustainability/hero-dumpster.png" alt="IDS Waste Management Dumpster" class="hero-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SUSTAINABILITY SECTION -->
+<section id="section-a-sustainability" class="sustainability-section">
+    <div class="container">
+        <div class="sustainability-two-column">
+            <div class="sustainability-left">
+                <span class="section-label">Our Commitment</span>
+                <h2>Sustainability You Can Stand Behind</h2>
+                <p class="section-subtitle">At IDS, recycling is mandatory. Every load goes through a documented process backed by real data and industry-recognized standards.</p>
+
+                <div class="sustainability-extra-text">
+                    <p>Through our work with <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer">Broad Run Recycling</a>, we give you the accountability you need.</p>
+                    <p>From material collection through final diversion reporting, IDS supports your sustainability goals with accountability, so you can stay focused on delivering successful projects.</p>
+                </div>
+            </div>
+
+            <div class="sustainability-right">
+                <div class="benefits-grid-stacked">
+                    <div class="benefit-card-large">
+                        <div class="benefit-card-image">
+                            <img src="images/sustainability/benefit-1.jpg" alt="Real Recycling Documentation" class="benefit-image">
+                        </div>
+                        <div class="benefit-card-content">
+                            <h3>Real Recycling, Not Assumptions</h3>
+                            <p>Every load is documented with facility-verified data, not estimated percentages.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card-large">
+                        <div class="benefit-card-image">
+                            <img src="images/sustainability/benefit-2.jpg" alt="LEED Reporting" class="benefit-image">
+                        </div>
+                        <div class="benefit-card-content">
+                            <h3>LEED & Sustainability Reporting</h3>
+                            <p>Accurate diversion records that meet LEED requirements and pass sustainability audits.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card-large">
+                        <div class="benefit-card-image">
+                            <img src="images/sustainability/benefit-3.jpg" alt="Dedicated Support" class="benefit-image">
+                        </div>
+                        <div class="benefit-card-content">
+                            <h3>Dedicated Sustainability Rep</h3>
+                            <p>Job-specific reporting support to meet your unique project requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card-large">
+                        <div class="benefit-card-image">
+                            <img src="images/sustainability/benefit-4.jpg" alt="Complete Service" class="benefit-image">
+                        </div>
+                        <div class="benefit-card-content">
+                            <h3>Start to Finish Service</h3>
+                            <p>Complete jobsite service from material collection through final diversion reporting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BROAD RUN RECYCLING SECTION -->
+<section id="section-b-broadrun" class="broadrun-section">
+    <div class="container">
+        <div class="section-header centered">
+            <span class="section-label">Our Partner</span>
+            <h2>Meet Broad Run Recycling</h2>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-left">
+                <div class="bento-item bento-stat">
+                    <div class="stat-number">Only</div>
+                    <div class="stat-label">Third-Party Certified C&D Facility in DC Metro</div>
+                </div>
+
+                <div class="bento-item bento-stat">
+                    <div class="stat-number">700+</div>
+                    <div class="stat-label">Tons Processed Daily</div>
+                </div>
+
+                <div class="bento-item bento-stat">
+                    <div class="stat-number">26,000</div>
+                    <div class="stat-label">Sq Ft Facility</div>
+                </div>
+            </div>
+
+            <div class="bento-right">
+                <div class="bento-item bento-combined-card">
+                    <div class="bento-hero">
+                        <img src="images/sustainability/broad-run-facility.jpg" alt="Broad Run Recycling Facility" class="bento-hero-image">
+                    </div>
+                    <div class="bento-content">
+                        <p class="large-text">Materials are processed through a transparent, facility-based system designed to support accurate diversion tracking, sustainability compliance, and defensible reporting.</p>
+                        <p class="materials-link">
+                            <a href="https://www.broadrunrecycling.com/materials" target="_blank" rel="noopener noreferrer" class="link-arrow">View materials accepted at Broad Run Recycling →</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-broadrun-marketing">
+            <div class="marketing-content">
+                <h3>Why Broad Run</h3>
+                <p class="marketing-subtitle">Broad Run Recycling is a dedicated C&D recycling facility serving the DC metro region. The facility is purpose-built to sort, track, and process construction materials with consistency, transparency, and accountability.</p>
+                <p>Broad Run operates under <strong>RCI certified standards</strong> and provides the facility-level data needed to support accurate diversion reporting and sustainability documentation.</p>
+
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">+</span>
+                        <div class="feature-content">
+                            <strong>On-site Weighing & Tracking.</strong> Real-time material measurement and documentation
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">+</span>
+                        <div class="feature-content">
+                            <strong>Dedicated Equipment & Staff.</strong> Purpose-built facility with trained professionals
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">+</span>
+                        <div class="feature-content">
+                            <strong>RCI Certified Standards.</strong> Third-party verified recycling processes
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">+</span>
+                        <div class="feature-content">
+                            <strong>Material-Level Data.</strong> Detailed diversion reporting by material type
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">+</span>
+                        <div class="feature-content">
+                            <strong>Waste Management Plans.</strong> Supports construction project compliance
+                        </div>
+                    </li>
+                </ul>
+
+                <p class="marketing-footer">
+                    <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer" class="link-arrow">Visit Broad Run Recycling →</a>
+                </p>
+            </div>
+
+            <div class="marketing-image">
+                <img src="images/sustainability/broad-run-process.jpg" alt="Broad Run Recycling Facility" class="marketing-img">
+            </div>
+        </div>
+
+        <div class="broadrun-cta-band">
+            <div class="cta-band-content">
+                <h3>Ready to design a waste and recycling plan built for sustainability and reporting accuracy?</h3>
+                <p>Work with IDS to create a documented recycling strategy that supports your project goals.</p>
+                <a href="/contact" class="btn btn-primary btn-large">Contact IDS to Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REPORTING SECTION -->
+<section id="section-c-reporting" class="reporting-section">
+    <div class="container">
+        <div class="section-header-hero centered">
+            <span class="section-eyebrow">CRITICAL INSIGHT</span>
+            <h2 class="section-hero-title">Why Accurate Reporting Matters</h2>
+            <p class="section-hero-subtitle">In construction, waste and recycling data is not just a formality. It directly impacts project compliance, sustainability goals, and owner confidence.</p>
+        </div>
+
+        <div class="risks-container">
+            <div class="risks-intro">
+                <h3>When diversion data is estimated or inaccurate:</h3>
+            </div>
+
+            <div class="risks-grid">
+                <div class="risk-card">
+                    <div class="risk-icon-flat">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L4 42H44L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M24 18V28M24 34V36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>LEED Documentation Issues</h4>
+                    <p>Delays or rejections during review that impact project timelines</p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon-flat">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 12V24L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Last-Minute Scrambling</h4>
+                    <p>Rework and data collection late in the project when errors are discovered</p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon-flat">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 36L16 20L24 28L32 12L40 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 40H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Reduced Diversion Rates</h4>
+                    <p>Reported percentages that don't reflect actual material recovery</p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon-flat">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 28C12 28 16 34 24 34C32 34 36 28 36 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="18" cy="20" r="2" fill="currentColor"/>
+                            <circle cx="30" cy="20" r="2" fill="currentColor"/>
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Lost Credibility</h4>
+                    <p>Damaged relationships with owners, auditors, and sustainability teams</p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon-flat">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                            <path d="M24 6V10M24 38V42M6 24H10M38 24H42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Missed Targets</h4>
+                    <p>Sustainability goals compromised by assumptions instead of verified data</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="insight-callout-card">
+            <div class="callout-icon">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="24" stroke="currentColor" stroke-width="2"/>
+                    <path d="M28 20V28M28 34V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="callout-content">
+                <h3>The Real Issue: Process, Not Intent</h3>
+                <p>In many cases, the issue is not intent, but process. Without facility-level tracking, diversion reporting becomes an estimate rather than a defensible record.</p>
+
+                <div class="comparison-section-standalone">
+                    <div class="comparison-title-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4L12 12H8L12 20L8 28H24L20 20L24 12H20L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Industry Shortcuts vs IDS Approach</h3>
+                    </div>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-column shortcuts">
+                            <div class="comparison-header">
+                                <span class="comparison-icon">✕</span>
+                                <h4>Common Industry Shortcuts</h4>
+                            </div>
+                            <ul>
+                                <li><span class="bullet-icon">▸</span><span>Recycling claims based on <em>assumed</em> diversion percentages</span></li>
+                                <li><span class="bullet-icon">▸</span><span>Limited visibility into where material goes after haul-off</span></li>
+                                <li><span class="bullet-icon">▸</span><span>Mixed debris sent to facilities with minimal sorting capability</span></li>
+                                <li><span class="bullet-icon">▸</span><span>Generic reports with little material-level detail</span></li>
+                                <li><span class="bullet-icon">▸</span><span>Recycling treated as a marketing claim rather than an operational process</span></li>
+                            </ul>
+                        </div>
+                        <div class="comparison-column ids-approach">
+                            <div class="comparison-header">
+                                <span class="comparison-icon">✓</span>
+                                <h4>The IDS Approach</h4>
+                            </div>
+                            <ul>
+                                <li><span class="bullet-icon">▸</span><span><strong>Facility-verified diversion</strong> through Broad Run Recycling</span></li>
+                                <li><span class="bullet-icon">▸</span><span><strong>Transparent material tracking</strong> at the facility level</span></li>
+                                <li><span class="bullet-icon">▸</span><span><strong>Project-specific, defensible reporting</strong></span></li>
+                                <li><span class="bullet-icon">▸</span><span>Data that <strong>supports LEED and sustainability review</strong></span></li>
+                                <li><span class="bullet-icon">▸</span><span><strong>Recycling treated as an operational process</strong> from start to finish</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="callout-highlight">IDS approaches recycling with the expectation that data must hold up under review, not just look good on paper.</p>
+                <a href="/contact" class="btn btn-primary btn-large">Mitigate Risk. Get Accurate Reporting.</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA SECTION -->
+<section class="final-cta-section">
+    <div class="final-cta-background">
+        <img src="images/sustainability/final-cta-bg.jpg" alt="IDS Waste Management" class="final-cta-bg-image">
+    </div>
+    <div class="container">
+        <div class="final-cta-content">
+            <div class="final-cta-badge">Partner with Confidence</div>
+            <h2>Let's simplify recycling while protecting your sustainability goals.</h2>
+            <p class="final-cta-subtext">Work with a partner that treats recycling as an operational process, not a marketing claim.</p>
+
+            <div class="final-cta-buttons">
+                <a href="/contact" class="btn btn-primary btn-xl">Talk to IDS</a>
+                <a href="https://www.broadrunrecycling.com/" target="_blank" rel="noopener noreferrer" class="btn btn-text">Explore Broad Run Recycling →</a>
+            </div>
+
+            <div class="final-trust-items">
+                <div class="trust-mini-item">
+                    <span class="trust-mini-icon">📞</span>
+                    <span>Quick Response</span>
+                </div>
+                <div class="trust-mini-item">
+                    <span class="trust-mini-icon">📄</span>
+                    <span>Detailed Reporting</span>
+                </div>
+                <div class="trust-mini-item">
+                    <span class="trust-mini-icon">✓</span>
+                    <span>LEED Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- Smooth Scroll JavaScript -->
+<script>
+(function(){
+    'use strict';
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+        anchor.addEventListener('click',function(e){
+            var targetId=this.getAttribute('href');
+            if(targetId==='#')return;
+            var target=document.querySelector(targetId);
+            if(target){
+                e.preventDefault();
+                target.scrollIntoView({behavior:'smooth',block:'start'});
+            }
+        });
+    });
+})();
+</script>
+
+<!--
+==============================================
+IMPLEMENTATION INSTRUCTIONS:
+==============================================
+
+1. Go to Content → Articles → New
+2. Title: "Sustainability and Recycling"
+3. Category: Choose appropriate category
+4. Status: Published
+5. Click "Toggle Editor" or "<>" to switch to CODE mode
+6. COPY THIS ENTIRE FILE and paste it into the editor
+7. Under "Options" tab:
+   - Show Title: No
+   - Show Category: No
+   - Show Author: No
+   - Show Create Date: No
+8. Save & Close
+
+9. Create Menu Item:
+   - Menus → Main Menu → New
+   - Menu Item Type: Articles → Single Article
+   - Select Article: "Sustainability and Recycling"
+   - Menu Title: "Sustainability"
+   - Save & Close
+
+10. Clear cache: System → Clear Cache
+
+11. Test the page on your site!
+
+NOTES:
+- All CSS is scoped to .sustainability-page - won't affect other pages
+- Images should be in /images/sustainability/ folder
+- Smooth scroll works for internal anchor links
+- Sticky scroll works on desktop (disabled on mobile)
+- Fully responsive design
+
+==============================================
+-->

@@ -1,9 +1,26 @@
 /**
+ * =================================================================
  * IDS Waste - Sustainability and Recycling Page
- * Design inspired by modern minimalist aesthetics
- * Template: Shaper HelixUltimate
- * Primary Color: #145a3a (IDS Green)
+ * =================================================================
+ *
+ * JOOMLA IMPLEMENTATION:
+ * 1. Copy this ENTIRE file
+ * 2. In Joomla: Extensions → Templates → Your Template
+ * 3. Paste into "Custom CSS" field at the bottom
+ * 4. Save
+ *
+ * OR upload to: /templates/your-template/css/sustainability-recycling.css
+ *
+ * CUSTOMIZATION:
+ * - Colors: Edit CSS variables in :root section below
+ * - Spacing: Edit section padding values
+ * - Fonts: Already uses Roboto (matches your site)
+ *
  * Version: 1.1 - Production Ready
+ * Last Updated: February 16, 2026
+ * Template: Works with any Joomla template
+ * Primary Color: #145a3a (IDS Green)
+ * =================================================================
  */
 
 /* ============================================ */
@@ -246,7 +263,7 @@ a:hover {
 /* ============================================ */
 
 .hero-section {
-    padding: 100px 0 120px;
+    padding: 120px 0 140px;
     background: transparent;
     position: relative;
 }
@@ -379,7 +396,7 @@ a:hover {
 /* ============================================ */
 
 section {
-    padding: 100px 0;
+    padding: 140px 0;
 }
 
 .section-header {
@@ -391,6 +408,39 @@ section {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Hero Section Header - Large Impact */
+.section-header-hero {
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #145a3a;
+    margin-bottom: 1.5rem;
+}
+
+.section-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #0c1018;
+    margin-bottom: 1.5rem;
+}
+
+.section-hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #6b7280;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .section-label {
@@ -1202,8 +1252,9 @@ section {
 }
 
 .risks-intro h3 {
-    color: #dc2626;
+    color: #353941;
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .risks-grid {
@@ -1216,18 +1267,26 @@ section {
     background: #ffffff;
     padding: 2rem;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.2s ease;
 }
 
 .risk-card:hover {
-    border-color: #fecaca;
-    background: #fef2f2;
+    border-color: #d1d5db;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .risk-icon {
     font-size: 2.25rem;
     margin-bottom: 1rem;
+}
+
+/* Flat Icon Styling */
+.risk-icon-flat {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    color: #6b7280;
 }
 
 .risk-card h4 {
@@ -1243,36 +1302,93 @@ section {
     line-height: 1.6;
 }
 
-/* Insight Callout */
-.insight-callout {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    padding: 3rem;
-    background: #f9fafb;
-    border-radius: 12px;
-    margin: 3rem 0;
-    align-items: start;
+/* Callout Card */
+.insight-callout-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
 }
 
-.insight-icon {
-    font-size: 2.5rem;
+.callout-icon {
+    margin: 0 auto 2.5rem;
+    width: 56px;
+    height: 56px;
+    color: #145a3a;
 }
 
-.insight-content h3 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
+.callout-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
     font-weight: 600;
+    color: #0c1018;
 }
 
-.insight-content p {
-    font-size: 1rem;
+.callout-content p {
+    font-size: 1.125rem;
     line-height: 1.7;
     color: #353941;
+    margin-bottom: 1.5rem;
 }
 
-.insight-content p:last-child {
+.callout-content p:last-child {
     margin-bottom: 0;
+}
+
+.callout-highlight {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0c1018;
+}
+
+.callout-content .btn {
+    margin-top: 2.5rem;
+    display: inline-block;
+}
+
+.callout-content .comparison-section-standalone {
+    margin: 3rem 0;
+}
+
+/* Standalone Comparison Section */
+.comparison-section-standalone {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.comparison-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-title-wrapper svg {
+    width: 28px;
+    height: 28px;
+    color: #6b7280;
+}
+
+.comparison-title-wrapper h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0c1018;
+    margin: 0;
+}
+
+.callout-content .comparison-title-wrapper h3 {
+    font-size: 1.125rem;
 }
 
 /* Comparison Accordion */
@@ -1289,6 +1405,10 @@ section {
     gap: 3rem;
 }
 
+.comparison-column {
+    text-align: left;
+}
+
 .comparison-header {
     display: flex;
     align-items: center;
@@ -1296,6 +1416,7 @@ section {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #e5e7eb;
+    justify-content: flex-start;
 }
 
 .comparison-icon {
@@ -1309,24 +1430,39 @@ section {
 }
 
 .comparison-column.shortcuts h4 {
-    color: #dc2626;
+    color: #374151;
 }
 
 .comparison-column.ids-approach h4 {
     color: #145a3a;
 }
 
+.comparison-column.shortcuts .comparison-icon {
+    color: #6b7280;
+}
+
+.comparison-column.ids-approach .comparison-icon {
+    color: #145a3a;
+}
+
 .comparison-column ul {
     list-style: none;
     margin: 0;
+    text-align: left;
 }
 
 .comparison-column ul li {
     display: flex;
     gap: 0.75rem;
+    align-items: flex-start;
     margin-bottom: 1rem;
     line-height: 1.6;
     font-size: 0.9375rem;
+    text-align: left;
+}
+
+.comparison-column ul li > span:not(.bullet-icon) {
+    flex: 1;
 }
 
 .bullet-icon {
@@ -1336,7 +1472,7 @@ section {
 
 .comparison-column.shortcuts ul li em {
     font-style: italic;
-    color: #dc2626;
+    color: #6b7280;
     font-weight: 500;
 }
 
@@ -1519,11 +1655,20 @@ section {
     }
 
     section {
-        padding: 60px 0;
+        padding: 80px 0;
+    }
+
+    .section-hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-hero-subtitle {
+        font-size: 1.0625rem;
     }
 
     .hero-section {
-        padding: 60px 0 80px;
+        padding: 80px 0 100px;
     }
 
     .hero-grid {
@@ -1567,10 +1712,29 @@ section {
     }
 
     .accordion-content-grid,
-    .comparison-grid,
-    .insight-callout {
+    .comparison-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .comparison-section-standalone {
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .comparison-title-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .comparison-title-wrapper h3 {
+        font-size: 1.25rem;
+    }
+
+    .callout-content .comparison-section-standalone {
+        margin: 2.5rem 0;
+        padding: 2rem 1.5rem;
     }
 
     .quality-grid {
@@ -1611,11 +1775,11 @@ section {
     }
 
     section {
-        padding: 50px 0;
+        padding: 70px 0;
     }
 
     .hero-section {
-        padding: 50px 0 60px;
+        padding: 60px 0 70px;
     }
 
     .benefit-card,
@@ -1628,7 +1792,10 @@ section {
         padding: 1.25rem;
     }
 
-    .insight-callout,
+    .insight-callout-card {
+        padding: 0;
+    }
+
     .broadrun-cta-band {
         padding: 2rem 1.5rem;
     }
