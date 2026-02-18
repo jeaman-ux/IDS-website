@@ -382,48 +382,7 @@ Instructions at bottom
 
 </div>
 
-<!-- JavaScript for Scroll Effects (Scoped to Sustainability Page) -->
-<script>
-(function(){
-    'use strict';
-
-    // Wait for DOM to be ready
-    document.addEventListener('DOMContentLoaded', function() {
-        // Only run if .sustainability-page exists on this page
-        const sustainabilityPage = document.querySelector('.sustainability-page');
-        if (!sustainabilityPage) return;
-
-        /**
-         * Smooth Scroll for Anchor Links
-         * Only applies to links within the sustainability page
-         */
-        sustainabilityPage.querySelectorAll('a[href^="#"]').forEach(function(anchor){
-            anchor.addEventListener('click', function(e){
-                const targetId = this.getAttribute('href');
-
-                // Skip if it's just "#"
-                if (targetId === '#') return;
-
-                // Look for target only within sustainability page
-                const targetElement = sustainabilityPage.querySelector(targetId);
-
-                if (targetElement) {
-                    e.preventDefault();
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-
-                    // Update URL without page jump
-                    if (history.pushState) {
-                        history.pushState(null, null, targetId);
-                    }
-                }
-            });
-        });
-    });
-})();
-</script>
+<!-- No JavaScript - Removed scroll effects for Joomla compatibility -->
 
 <!--
 ==============================================
