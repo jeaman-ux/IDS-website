@@ -91,10 +91,10 @@
     margin: 0 !important;
 }
 
-/* Target SP Page Builder's row containers */
-.sppb-row-container,
-.sppb-container,
-.sppb-container-inner {
+/* Target SP Page Builder's row containers - ONLY for sustainability page */
+.sustainability-page .sppb-row-container,
+.sustainability-page .sppb-container,
+.sustainability-page .sppb-container-inner {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
