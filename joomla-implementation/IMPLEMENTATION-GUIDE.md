@@ -2,29 +2,31 @@
 
 ## Quick Start (5 Minutes)
 
-### Step 1: Add the CSS
-1. Go to **System → Site Templates → Your Template**
-2. Click on **user.css** or **custom.css** (or create one if it doesn't exist)
-3. Copy the contents of `sustainability-joomla-scoped.min.css` and paste it at the bottom
-4. Save and close
-
-**IMPORTANT:** Use the **scoped** version (`sustainability-joomla-scoped.min.css`) when adding to custom CSS. This ensures the styles only affect the sustainability page and won't conflict with other pages.
-
-**Alternative Method:**
-- Copy contents of `sustainability-joomla-scoped.min.css`
-- Go to **Content → Articles → New**
-- In the article editor, switch to "Code" or "Source" mode
-- Add at the top: `<style>PASTE CSS HERE</style>`
-
-### Step 2: Add the HTML
+### Option 1: All-in-One (Easiest)
 1. Go to **Content → Articles → New**
-2. Title: "Sustainability and Recycling" (or your preferred title)
+2. Title: "Sustainability and Recycling"
 3. Switch the editor to **Code/Source** mode
-4. Copy the entire contents of `sustainability-joomla-snippet.html`
+4. Copy the entire contents of `sustainability-complete-article.html`
 5. Paste into the article editor
 6. Save and close
 
-### Step 3: Upload Images
+**This includes everything:** CSS and HTML in one file. No separate CSS setup needed.
+
+### Option 2: Separate CSS (For Custom CSS Field)
+1. **Add CSS to Template:**
+   - Go to **System → Site Templates → Your Template**
+   - Find the **Custom CSS** field or **user.css** tab
+   - Copy contents of `sustainability-joomla-scoped.css` and paste it
+   - Save
+
+2. **Add HTML to Article:**
+   - Go to **Content → Articles → New**
+   - Title: "Sustainability and Recycling"
+   - Switch to **Code/Source** mode
+   - Copy the HTML portion from `sustainability-complete-article.html` (everything inside the `<div class="sustainability-page">` tag)
+   - Paste and save
+
+### Step 2: Upload Images
 1. Go to **Content → Media**
 2. Create a folder: `images/sustainability/`
 3. Upload your images with these names:
@@ -34,11 +36,11 @@
    - `broad-run-process.jpg` - Process image
    - `final-cta-bg.jpg` - Final CTA background
 
-### Step 4: Update Links
+### Step 3: Update Links
 1. Find all instances of `/contact` in the HTML
 2. Replace with your actual contact page URL (e.g., `/contact-us` or `/index.php/contact`)
 
-### Step 5: Test
+### Step 4: Test
 1. View the article on your site
 2. Test on mobile devices
 3. Check all links work correctly
@@ -48,68 +50,53 @@
 
 ## Detailed Implementation Instructions
 
-### Method 1: Custom CSS Field (Recommended)
+### Method 1: All-in-One (Recommended)
 
-**Best for:** Sites with access to template custom CSS
+**Best for:** Quick setup, testing, or sites without custom CSS access
 
-1. **Add CSS to Template:**
-   - Navigate to: **Extensions → Templates → Templates**
-   - Click on your active template
-   - Find the **Custom CSS** field or **user.css** tab
-   - Paste the contents of `sustainability-joomla-scoped.min.css`
-   - **IMPORTANT:** Use the scoped version to prevent style conflicts with other pages
-   - Click **Save & Close**
-
-2. **Create Article:**
+1. **Create Article:**
    - Go to **Content → Articles → New**
    - Set Title: "Sustainability and Recycling"
    - Set Category as appropriate
    - Switch editor to **Code/Source** mode
-   - Paste contents of `sustainability-joomla-snippet.html`
+   - Copy entire contents of `sustainability-complete-article.html`
+   - Paste into the editor
    - Save article
 
-3. **Create Menu Item:**
+2. **Create Menu Item:**
    - Go to **Menus → [Your Menu] → Add New Menu Item**
    - Menu Item Type: **Articles → Single Article**
    - Select your sustainability article
    - Set menu title (e.g., "Sustainability")
    - Save and close
 
-### Method 2: Inline CSS (Alternative)
+**Benefits:**
+- Everything in one file (CSS + HTML + JavaScript)
+- No template modifications needed
+- Fully scoped and isolated
+- Easy to backup and transfer
 
-**Best for:** Sites without easy access to custom CSS, or testing
+### Method 2: Separate CSS (Alternative)
 
-1. **Create Article with Inline CSS:**
+**Best for:** Sites with custom CSS access, cleaner separation
+
+1. **Add CSS to Template:**
+   - Navigate to: **Extensions → Templates → Templates**
+   - Click on your active template
+   - Find the **Custom CSS** field or **user.css** tab
+   - Paste the contents of `sustainability-joomla-scoped.css`
+   - **Note:** CSS is scoped to `.sustainability-page` - won't affect other pages
+   - Click **Save & Close**
+
+2. **Create Article:**
    - Go to **Content → Articles → New**
+   - Set Title: "Sustainability and Recycling"
    - Switch to **Code/Source** mode
-   - Add this at the top:
-   ```html
-   <style>
-   /* Paste contents of sustainability-joomla-scoped.min.css here */
-   </style>
-   ```
-   - Then paste the HTML from `sustainability-joomla-snippet.html`
-   - **Note:** The scoped version ensures styles only apply to this page
-   - Save article
+   - Extract only the HTML portion from `sustainability-complete-article.html`
+   - (Everything between `<div class="sustainability-page">` and its closing `</div>`)
+   - Paste and save article
 
-2. **Create Menu Item** (same as Method 1, step 3)
-
-### Method 3: External CSS File
-
-**Best for:** Advanced users who want to keep CSS separate
-
-1. **Upload CSS File:**
-   - Upload `sustainability-joomla.min.css` to `/templates/YOUR_TEMPLATE/css/`
-   - Or upload to `/media/css/`
-
-2. **Add to Template:**
-   - Edit your template's `index.php`
-   - Add this line in the `<head>` section:
-   ```php
-   <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/sustainability-joomla.min.css" type="text/css" />
-   ```
-
-3. **Create Article:** (same as Method 1, step 2)
+3. **Create Menu Item** (same as Method 1, step 2)
 
 ---
 
@@ -191,10 +178,10 @@ Find and replace these links in the HTML:
 
 ### Change Brand Colors
 
-Edit the CSS variables at the top of `sustainability-joomla.css`:
+Edit the CSS variables at the top of `sustainability-joomla-scoped.css`:
 
 ```css
-:root {
+.sustainability-page {
     --ids-green: #145a3a;        /* Change to your primary color */
     --ids-green-dark: #0e3d26;   /* Darker shade for hovers */
 }
@@ -209,7 +196,7 @@ Edit the CSS variables at the top of `sustainability-joomla.css`:
 ### Adjust Spacing
 
 ```css
-:root {
+.sustainability-page {
     --container-max-width: 1280px;  /* Page width */
     --container-padding: 60px;      /* Side margins */
     --section-padding: 100px;       /* Section spacing */
@@ -606,20 +593,14 @@ Not officially supported due to CSS custom properties, but graceful degradation 
 ### File Structure
 ```
 joomla-implementation/
-├── sustainability-complete-article.html     (Complete version with inline CSS and JS)
-├── sustainability-joomla-snippet.html       (HTML only - for use with separate CSS)
+├── sustainability-complete-article.html     (Complete article with CSS + HTML + JS)
 ├── sustainability-joomla-scoped.css         (Scoped CSS - for custom CSS field)
-├── sustainability-joomla-scoped.min.css     (Scoped CSS minified - RECOMMENDED)
-├── sustainability-joomla.css                (Global CSS - for full site integration)
-├── sustainability-joomla.min.css            (Global CSS minified)
-├── sustainability-sp-pagebuilder.html       (For SP Page Builder)
 └── IMPLEMENTATION-GUIDE.md                  (This file)
 ```
 
 **Which files to use:**
-- **For Custom CSS:** Use `sustainability-joomla-scoped.min.css` (scoped to page only)
-- **For Complete Article:** Use `sustainability-complete-article.html` (all-in-one)
-- **For SP Page Builder:** Use `sustainability-sp-pagebuilder.html`
+- **Quick Setup:** Use `sustainability-complete-article.html` (recommended - all-in-one)
+- **Separate CSS:** Use `sustainability-joomla-scoped.css` + HTML from complete article
 ```
 
 ### Color Variables Quick Reference
