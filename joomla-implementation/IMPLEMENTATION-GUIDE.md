@@ -5,11 +5,13 @@
 ### Step 1: Add the CSS
 1. Go to **System → Site Templates → Your Template**
 2. Click on **user.css** or **custom.css** (or create one if it doesn't exist)
-3. Copy the contents of `sustainability-joomla.min.css` and paste it at the bottom
+3. Copy the contents of `sustainability-joomla-scoped.min.css` and paste it at the bottom
 4. Save and close
 
+**IMPORTANT:** Use the **scoped** version (`sustainability-joomla-scoped.min.css`) when adding to custom CSS. This ensures the styles only affect the sustainability page and won't conflict with other pages.
+
 **Alternative Method:**
-- Copy contents of `sustainability-joomla.min.css`
+- Copy contents of `sustainability-joomla-scoped.min.css`
 - Go to **Content → Articles → New**
 - In the article editor, switch to "Code" or "Source" mode
 - Add at the top: `<style>PASTE CSS HERE</style>`
@@ -54,7 +56,8 @@
    - Navigate to: **Extensions → Templates → Templates**
    - Click on your active template
    - Find the **Custom CSS** field or **user.css** tab
-   - Paste the contents of `sustainability-joomla.min.css`
+   - Paste the contents of `sustainability-joomla-scoped.min.css`
+   - **IMPORTANT:** Use the scoped version to prevent style conflicts with other pages
    - Click **Save & Close**
 
 2. **Create Article:**
@@ -82,10 +85,11 @@
    - Add this at the top:
    ```html
    <style>
-   /* Paste contents of sustainability-joomla.min.css here */
+   /* Paste contents of sustainability-joomla-scoped.min.css here */
    </style>
    ```
    - Then paste the HTML from `sustainability-joomla-snippet.html`
+   - **Note:** The scoped version ensures styles only apply to this page
    - Save article
 
 2. **Create Menu Item** (same as Method 1, step 3)
@@ -602,12 +606,20 @@ Not officially supported due to CSS custom properties, but graceful degradation 
 ### File Structure
 ```
 joomla-implementation/
-├── sustainability-joomla-snippet.html  (Copy into Joomla article)
-├── sustainability-joomla.css           (Full CSS - for customization)
-├── sustainability-joomla.min.css       (Minified CSS - for production)
-├── IMPLEMENTATION-GUIDE.md             (This file)
-├── CUSTOMIZATION-GUIDE.md              (Detailed customization)
-└── TROUBLESHOOTING-GUIDE.md            (Common issues)
+├── sustainability-complete-article.html     (Complete version with inline CSS and JS)
+├── sustainability-joomla-snippet.html       (HTML only - for use with separate CSS)
+├── sustainability-joomla-scoped.css         (Scoped CSS - for custom CSS field)
+├── sustainability-joomla-scoped.min.css     (Scoped CSS minified - RECOMMENDED)
+├── sustainability-joomla.css                (Global CSS - for full site integration)
+├── sustainability-joomla.min.css            (Global CSS minified)
+├── sustainability-sp-pagebuilder.html       (For SP Page Builder)
+└── IMPLEMENTATION-GUIDE.md                  (This file)
+```
+
+**Which files to use:**
+- **For Custom CSS:** Use `sustainability-joomla-scoped.min.css` (scoped to page only)
+- **For Complete Article:** Use `sustainability-complete-article.html` (all-in-one)
+- **For SP Page Builder:** Use `sustainability-sp-pagebuilder.html`
 ```
 
 ### Color Variables Quick Reference
