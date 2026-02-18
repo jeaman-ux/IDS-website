@@ -443,8 +443,8 @@
 }
 
 .sustainability-page .benefits-grid-stacked {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
 }
@@ -452,34 +452,28 @@
 .sustainability-page .benefit-card-large {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    background: rgba(255, 255, 255, 0.7);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    padding: 1.5rem;
+    padding: 2rem;
     border: 1px solid rgba(229, 231, 235, 0.4);
     border-radius: 12px;
     transition: all 0.2s ease;
 }
 
 .sustainability-page .benefit-card-large:hover {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     border-color: rgba(20, 90, 58, 0.4);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .sustainability-page .benefit-card-image {
-    width: 100%;
-    height: 200px;
-    flex-shrink: 0;
+    display: none;
 }
 
 .sustainability-page .benefit-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
+    display: none;
 }
 
 .sustainability-page .benefit-card-content {
@@ -487,8 +481,8 @@
 }
 
 .sustainability-page .benefit-card-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
     color: #0c1018;
     font-weight: 600;
 }
@@ -497,7 +491,7 @@
     color: #6b7280;
     line-height: 1.6;
     margin-bottom: 0;
-    font-size: 0.9375rem;
+    font-size: 1rem;
 }
 
 /* ============================================ */
@@ -986,93 +980,6 @@
 /* FINAL CTA SECTION (SCOPED)                  */
 /* ============================================ */
 
-.sustainability-page .final-cta-section {
-    background: #f9fafb;
-    padding: 100px 0;
-    position: relative;
-}
-
-.sustainability-page .final-cta-content {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.sustainability-page .final-cta-badge {
-    display: inline-block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #ffffff;
-    background: rgba(20, 90, 58, 0.9);
-    padding: 8px 20px;
-    border-radius: 20px;
-    margin-bottom: 1.5rem;
-}
-
-.sustainability-page .final-cta-content h2 {
-    margin-bottom: 1.25rem;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.sustainability-page .final-cta-subtext {
-    font-size: 1.125rem;
-    color: #ffffff;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.sustainability-page .final-cta-buttons {
-    display: flex;
-    gap: 1.25rem;
-    justify-content: center;
-    margin-bottom: 3rem;
-}
-
-.sustainability-page .final-trust-items {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    padding-top: 2.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.sustainability-page .trust-mini-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.sustainability-page .trust-mini-icon {
-    font-size: 1.25rem;
-}
-
-.sustainability-page .final-cta-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-}
-
-.sustainability-page .final-cta-bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /* ============================================ */
 /* RESPONSIVE DESIGN (SCOPED)                  */
 /* ============================================ */
@@ -1190,6 +1097,11 @@
         padding-top: 2rem;
     }
 
+    .sustainability-page .benefits-grid-stacked {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .sustainability-page .comparison-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1217,20 +1129,6 @@
 
     .sustainability-page .broadrun-cta-band {
         padding: 2rem 1.5rem;
-    }
-
-    .sustainability-page .final-cta-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .sustainability-page .final-cta-buttons .btn {
-        width: 100%;
-    }
-
-    .sustainability-page .final-trust-items {
-        flex-wrap: wrap;
-        gap: 1.5rem;
     }
 }
 
